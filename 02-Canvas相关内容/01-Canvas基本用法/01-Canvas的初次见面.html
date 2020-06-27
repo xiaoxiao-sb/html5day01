@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$做人呢最重要的就是开心啦$</title>
+  <script type="text/javascript">
+
+    /*
+    *
+    * Canvas   标签---作用就是为页面提供画图----画板
+    *
+    *
+    *
+    *
+    *
+    * */
+  </script>
+  <style type="text/css">
+    canvas {
+      border: 1px solid red;
+    }
+  </style>
+</head>
+<body>
+<canvas id="test" width="600" height="600">
+  <span>您的破浏览器不支持Canvas,请更新</span>
+</canvas>
+<script type="text/javascript">
+  //不要通过CSS来设置canvas的宽和高,容易变形
+
+  //页面加载
+  window.onload = function () {
+    //获取画板
+    var canvas = document.querySelector("#test");
+
+    //画图
+
+    //检测是否支持绘制对象-----画笔
+    // if(canvas.getContext){
+    //   //获取绘制对象
+    //   var ctx=canvas.getContext("2d");
+    // }
+
+    if(!canvas.getContext) return;
+    var ctx=canvas.getContext("2d");
+
+
+
+
+
+
+
+  };
+
+</script>
+
+</body>
+</html>

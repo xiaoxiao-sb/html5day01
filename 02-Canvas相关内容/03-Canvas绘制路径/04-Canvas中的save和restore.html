@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$做人呢最重要的就是开心啦$</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background-color: #C7EDCC;
+    }
+
+    canvas {
+      border: 1px solid red;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+<canvas id="test" width="600" height="600"></canvas>
+
+<script type="text/javascript">
+  //页面加载
+  window.onload = function () {
+    var canvas = document.querySelector("#test");
+    if (!canvas.getContext) return;
+    var ctx = canvas.getContext("2d");
+
+    //默认是黑色
+    // ctx.save();//--保存状态---颜色
+    // ctx.strokeStyle = "red";
+    // ctx.save();
+    // ctx.strokeStyle="green";
+    // ctx.strokeStyle="blue";
+    // ctx.save();
+    // ctx.strokeStyle="orange";
+    //
+    //
+    //
+    //
+    //
+    // ctx.restore();
+    // ctx.restore();
+    // ctx.strokeRect(10, 10, 100, 100);
+
+
+    // ctx.strokeStyle="red";
+    // ctx.strokeRect(0,0,100,100);
+    //
+    //
+    // ctx.save();//保存
+    // //样式代码
+    // ctx.strokeStyle="blue";
+    // ctx.strokeRect(0,0,100,100);
+    //
+    // ctx.restore();//恢复
+    //
+    //
+    // ctx.strokeRect(0,0,100,100);
+
+
+
+
+    // ctx.save();
+    //
+    // ctx.beginPath();
+    //
+    // ctx.restore();
+
+
+
+
+
+  };
+</script>
+</body>
+</html>

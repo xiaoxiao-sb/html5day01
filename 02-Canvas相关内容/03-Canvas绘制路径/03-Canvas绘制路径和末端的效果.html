@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$做人呢最重要的就是开心啦$</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background-color: #C7EDCC;
+    }
+
+    canvas {
+      border: 1px;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+<canvas id="test" width="600" height="600"></canvas>
+<script type="text/javascript">
+  //页面加载
+  window.onload = function () {
+    //获取画板
+    var canvas = document.querySelector("#test");
+    //检测
+    if (!canvas.getContext) return;
+    //获取绘制对象
+    var ctx = canvas.getContext("2d");
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = "red";
+    ctx.lineCap="butt";//round---butt
+    //square:变成方形,但是会比之前变的长一些
+    //画线
+    //round--两端变成原型
+    //butt默认
+    ctx.moveTo(100, 100);
+    ctx.lineTo(200, 200);
+    ctx.stroke();
+  };
+</script>
+</body>
+</html>

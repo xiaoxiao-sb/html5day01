@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$永远24K纯帅的$</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background-color: #C7EDCC;
+    }
+
+    canvas {
+      border: 1px solid red;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+<canvas id="test" width="600" height="600"></canvas>
+<script type="text/javascript">
+
+  //页面的加载事件
+
+  window.onload = function () {
+
+    //获取画布
+    var canvas = document.querySelector("#test");
+    //检测
+    if (!canvas.getContext) return;
+    //获取绘制对象
+    var ctx = canvas.getContext("2d");
+    //鼠标按下事件
+    canvas.onmousedown = function (e) {
+      e = e || window.event;
+      //获取横坐标和纵坐标作为起点
+      //捕获鼠标的
+      if (canvas.setCapture) {
+        canvas.setCapture();
+      }
+      //起点横坐标:鼠标按下的可视区域的横坐标clientX-画布的offsetLeft---横坐标
+      // 起点纵坐标:鼠标按下的可视区域的纵坐标clientY-画布的offsetTOp--纵坐标
+      ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+      document.onmousemove = function (evt) {
+        evt = evt || window.event;
+        ctx.lineWidth = 10;//设置的线的宽度
+        ctx.strokeStyle = "red";
+        ctx.lineJoin = "round";
+        ctx.save();//保存状态
+        //结束的点
+        ctx.lineTo(evt.clientX - canvas.offsetLeft, evt.clientY - canvas.offsetTop);
+        ctx.stroke();
+        ctx.restore();//恢复
+      }; // end onmousemove
+      //鼠标抬起事件,干掉鼠标移动事件,和自身的鼠标抬起事件(同时要释放鼠标)
+      document.onmouseup = function () {
+        document.onmousemove = document.onmouseup = null;
+        //释放鼠标
+        if (document.releaseCapture) {
+          document.releaseCapture();//释放鼠标
+        }
+      };
+      return false;
+
+    }; //end onmousedown
+  };
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+

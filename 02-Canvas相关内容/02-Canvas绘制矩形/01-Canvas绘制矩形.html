@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$做人呢最重要的就是开心啦$</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background-color: #C7EDCC;
+    }
+
+    canvas {
+      border: 1px solid red;
+      background-color: pink;
+    }
+
+  </style>
+</head>
+<body>
+<canvas id="test" width="600" height="600"></canvas>
+<script type="text/javascript">
+  //需求:在画板上绘制一个矩形
+
+  //页面加载
+  window.onload = function () {
+    //获取画板
+    var canvas = document.querySelector("#test");
+    //检测绘制对象是否支持
+    if (!canvas.getContext) return;
+
+    //获取绘制对象
+    var ctx = canvas.getContext("2d");
+    //设置矩形边框的颜色(描边的颜色)
+    ctx.strokeStyle = "green";
+    //设置描边的宽度
+    ctx.lineWidth = 10;
+    //设置连接处的样式
+    ctx.lineJoin = "bevel";//miter-----直角,round---圆角,bevel--三角
+    //绘制一个矩形
+    ctx.strokeRect(100, 100, 200, 100);
+
+    //fillRect();-----填充的方式画矩形
+
+    ctx.fillStyle = "yellow";
+    ctx.fillRect(100, 230, 200, 200);
+
+    //清空----重新绘制---并设置为透明
+    ctx.clearRect(100, 230, 200, 200);
+
+
+    /*
+    *
+    * strokeRect();
+    * fillRect();
+    * clearRect();
+    *
+    * 三个方法的参数个数一致
+    * 参数1:起始点的横坐标
+    * 参数2:起始点的纵坐标
+    * 参数3:矩形的宽
+    * 参数4:矩形的高
+    *
+    *
+    *
+    *
+    * */
+
+  };
+</script>
+</body>
+</html>

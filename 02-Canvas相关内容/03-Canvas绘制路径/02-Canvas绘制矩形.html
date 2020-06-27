@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$做人呢最重要的就是开心啦$</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background-color: #C7EDCC;
+    }
+
+    canvas {
+      border: 1px solid red;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+<canvas id="test" width="600" height="600"></canvas>
+
+<script type="text/javascript">
+
+  window.onload = function () {
+    //获取画布
+    var canvas = document.querySelector("#test");
+    //检测
+    if (!canvas.getContext) return;
+    var ctx = canvas.getContext("2d");
+    //绘制矩形
+    /*
+    *
+    * 参数1:横坐标
+    * 参数2:纵坐标
+    * 参数3:宽
+    * 参数4:高
+    *
+    * */
+    ctx.rect(100, 100, 200, 100);
+    ctx.stroke();
+  };
+</script>
+</body>
+</html>

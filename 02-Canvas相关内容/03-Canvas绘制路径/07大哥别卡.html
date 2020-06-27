@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$做人呢最重要的就是开心啦$</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background-color: #C7EDCC;
+    }
+  </style>
+</head>
+<body>
+<input type="button" value="按钮" id="btn"/>
+
+
+<script type="text/javascript">
+  //获取一个按钮
+  var btnObj=document.getElementById("btn");
+  //事件处理函数:  注册事件的时候,后面的这个函数,就叫事件处理函数,函数做的事,就是事件发生后响应 的事件
+
+  //e----参数
+  //函数和事件相关---事件处理函数
+  //e-----事件参数对象
+  btnObj.onclick=function (e) {
+    console.log(e);//一个
+    window.event
+  };
+  //事件触发,函数调用.代码执行
+
+  //凡是事件的事件处理函数----事件后面的 function(e){}
+</script>
+</body>
+</html>

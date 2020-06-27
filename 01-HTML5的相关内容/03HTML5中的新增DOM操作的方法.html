@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$做人呢最重要的就是开心啦$</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background-color: #C7EDCC;
+    }
+
+    div {
+      width: 300px;
+      height: 200px;
+      background-color: yellow;
+    }
+
+
+    .one {
+      width: 200px;
+      height: 150px;
+      background-color: yellow;
+    }
+
+    .two {
+      border: 2px solid red;
+    }
+
+    .three {
+      font-size: 50px;
+    }
+
+    .four {
+      font-family: 全新硬笔行书简;
+    }
+
+    .five {
+      color: pink;
+    }
+  </style>
+</head>
+<body>
+<div id="dv" class="one two three four ">哈哈,我又变帅了</div>
+<p>第一个</p>
+<p>第2个</p>
+<p>第3个</p>
+<input type="button" value="切换" id="btn"/>
+<script type="text/javascript">
+  /*
+  *
+  * DOM:Document Object Model  文档 对象 模型
+  * 一个页面就是一个文档,就是一个对象
+  * 页面中所有的标签都叫元素,也叫节点----都可以叫对象
+  * 形成了一个树形结构图----DOM树
+  *
+  * DOM就是操作页面的元素
+  * 先获取元素(标签)
+  * DOM中提供了一些方法(API)
+  * document.getELementById(id属性的值);---单个的对象
+  * document.getElementsByTageName(标签的名字)---多个的元素放在一个数组中
+  * document.getElementsByClassName(类样式的名字)----多个的元素放在一个数组中---H5中的
+  * document.getElementsByName(name属性的值)---多个的元素放在一个数组中
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  * */
+
+
+  //HTML5中新增的
+
+  //获取div
+  //document.querySelector(选择器);
+  // var divObj = document.querySelector("#dv");
+  // console.log(divObj);//获取的是
+  //
+  // console.log("===============");
+  //
+  // //document.querySelectorAll(选择器);---多个的存放在一个数组中
+  // var pObjs=document.querySelectorAll("p");
+  // console.log(pObjs);
+
+
+  //HTML中新增的DOM的方法-----类样式操作的
+
+  //获取div元素
+  var divObj = document.querySelector("#dv");
+  //获取div中所有的类样式
+  console.log(divObj.classList);
+  //新增一个类样式
+  divObj.classList.add("five");
+  //移除一个类样式
+  divObj.classList.remove("three");
+  //是否包含某个类样式
+  console.log(divObj.classList.contains("two"));
+  //切换类样式
+
+  document.querySelector("#btn").onclick = function () {
+    divObj.classList.toggle("five");
+  };
+
+</script>
+</body>
+</html>

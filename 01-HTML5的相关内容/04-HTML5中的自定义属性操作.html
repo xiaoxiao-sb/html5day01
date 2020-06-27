@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$做人呢最重要的就是开心啦$</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background-color: #C7EDCC;
+    }
+  </style>
+</head>
+<body>
+<div id="dv" data-name="小黑" data-age="10" data-sex="男"  ></div>
+
+<script type="text/javascript">
+  window.onload=function () {
+    //获取标签的自定义属性值
+    //获取div
+    var divObj=document.querySelector("#dv");
+    //console.log(divObj.getAttribute("name"));//获取不到
+    //divObj.setAttribute("age","10");
+
+    //console.log(divObj.dataset);
+    // for(var key in divObj.dataset){
+    //   console.log(key+"==="+divObj.dataset[key]);
+    // }
+    //获取自定义属性
+    //console.log(divObj.dataset.age);
+    //设置自定义属性
+    divObj.dataset.height="170";
+    divObj.dataset.myFace="好帅";
+
+    /*
+    *
+    *
+    * HTML5中自定义属性在html标签中定义:
+    * data开始
+    * data-属性名字
+    *
+    *
+    *
+    *
+    *
+    *
+    * */
+  };
+</script>
+</body>
+</html>
